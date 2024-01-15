@@ -2,9 +2,9 @@ import { createWalletClient, custom } from "viem";
 import masterChefAbi from "./masterchef.json";
 import tokenAbi from "./erc20abi.json";
 import { ethers } from "ethers";
-import { useEffect } from "react";
 
 const masterchefAddr = '0x7a843F02C34Ad1c56b7719048fc8E9Ce906CB11D';
+const chainId = '0x7f8c26';
 
 const convertToEth = (type, value) => {
   if (type === 'reward') {
@@ -24,7 +24,6 @@ export async function connectWallet() {
   });
 
   try {
-    const chainId = '0x7f8c26';
     const isNetworkAdded = await ethereum.request({
       method: 'wallet_getNetworks',
       params: [],
@@ -33,7 +32,7 @@ export async function connectWallet() {
     });
 
     if (!isNetworkAdded) {
-      await ethereum.request({
+      await window.ethereum.request({
         method: "wallet_addEthereumChain",
         params: [{
           chainId: chainId,
@@ -58,7 +57,7 @@ export async function connectWallet() {
     chainId,
     jsonrpc: 'https://meowbored.pro',
   };
-  
+
   const transport = custom(window.ethereum);
 
   const client = createWalletClient({
@@ -81,19 +80,6 @@ export async function connectWallet() {
     masterchefAddr,
   };
 }
-
-// Subscribe to network change event
-useEffect(() => {
-  ethereum.on('chainChanged', async (chainId) => {
-    if (chainId !== chainId) {
-      // If the current chain ID is different, switch to the desired network
-      await ethereum.request({
-        method: "wallet_switchEthereumChain",
-        params: [{ chainId: chainId }],
-      });
-    }
-  });
-}, []);
 
 export const fetchTokenBalance = async (tokenaddress, userwallet) => {
   const web3connection = await connectWallet();
