@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Font+Name&display=swap');
+
+html, body {
+  overflow-x: hidden;
+  font-family: 'Font Name', sans-serif;
+  background-color: #008080;
+}
+
+@media (max-width: 991.98px) {
+  .offcanvas-collapse {
+    position: fixed;
+    top: 56px;
+    bottom: 0;
+    left: 100%;
+    width: 100%;
+    padding: 0 1rem;
+    overflow-y: auto;
+    visibility: hidden;
+    background-color: #c0c0c0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+  }
+  
+  .offcanvas-collapse.open {
+    visibility: visible;
+    transform: translateX(-100%);
+  }
+}
+
+/* Added feature: Styling for navigation links */
+
+.nav-scroller .nav {
+  color: #ffffff;
+}
+
+.nav-scroller .nav-link {
+  padding: 0.75rem 0;
+  font-size: 0.875rem;
+  color: #000000;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-scroller .nav-link:hover {
+  color: #ff0000;
+}
+
+.nav-scroller .active {
+  font-weight: 500;
+  color: #000000;
+}

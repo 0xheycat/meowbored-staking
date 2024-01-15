@@ -1,0 +1,71 @@
+body.myBodyClass {
+  background: url("./faucet/images/bg-1.png") no-repeat;
+  background-color: #f7f7fa;
+  color: rgb(255, 255, 255);
+}
+
+.title {
+  color: rgb(255, 255, 255);
+  margin-bottom: 1rem;
+}
+
+.box {
+  margin-top: 50px;
+}
+
+.panel {
+  margin-top: 2em;
+}
+
+.panel-heading {
+  background-image: linear-gradient(to left, #f3eef2, #f4f4f7);
+  background-color: rgb(241, 238, 238);
+  color: rgb(63, 209, 107);
+  padding: 10px;
+}
+
+.address-box {
+  padding: 3em;
+}
+
+.box .title {
+  color: #333;
+}
+
+.navbar {
+  background-color: rgb(247, 243, 243);
+  color: rgb(248, 245, 245);
+}
+
+.navbar .navbar-item {
+  color: rgb(68, 65, 65);
+}
+
+.connect-wallet span {
+  color: #E10859;
+}
+
+.connect-wallet:hover {
+  background-color: #164223 !important;
+}
+
+.container.main-content {
+  max-width: 1000px !important;
+}
+
+.faucet-hero-body {
+  margin-top: 50px;
+}
+
+.withdraw-error {
+  color: red;
+}
+
+.withdraw-success {
+  color: green;
+}
+
+.large-input {
+  width: 300px;
+  height: 40px;
+}

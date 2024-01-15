@@ -1,0 +1,12 @@
+.modal-sheet .modal-dialog {
+  display: flex;
+  max-width: 380px;
+  width: 100%;
+  transition: bottom 0.75s ease-in-out;
+}
+
+.modal-sheet .modal-footer {
+  padding-bottom: 2rem;
+  background-color: #f8f8f8;
+}
+

@@ -1,0 +1,26 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  background-color: #faf6f6; /* Set background color to black */
+  font-family: "MS Sans Serif", Arial, sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth; /* Add smooth scrolling behavior */
+}
+
+a {
+  text-decoration: none;
+  color: #dadadf; /* Set link color to blue */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+  }
+}
