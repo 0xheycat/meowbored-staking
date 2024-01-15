@@ -5,14 +5,10 @@ import { getPoolDetails, action, autoCompound } from '../components/config';
 import { Box, Button, Container } from "@mui/material";
 import "98.css";
 import "98.css/dist/98.css";
-import Link from 'next/link'
 
 export default function Farms() {
   const [poolArray, getPoolArray] = useState([]);
   const [loadingState, setLoadingState] = useState(false);
-  <Link href="/claimPage">
-    <a>Claim Tokens</a>
-  </Link>
 
   useEffect(() => {
     getPoolInfo();
