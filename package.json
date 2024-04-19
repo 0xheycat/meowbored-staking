@@ -1,8 +1,11 @@
 {
-  "name": "@meowbored/meowbored-staking",
+  "name": "@meowboreds/meowbored-staking",
   "version": "0.1.0",
-  "author": {    "name": "Fatalbar",    "email": "meowbored24@gmail.com", },
-  "repository": {      "type": "git",      "url": "https://github.com/fatalbar/meowbored-staking" },
+  "author": "Fatalbar",
+  "email": "meowbored24@gmail.com",
+  "type": "git",
+  "url": "https://github.com/fatalbar/meowbored-staking"
+  "registry": "https://npm.pkg.github.com/meowboreds"
   "private": true,
   "scripts": {
     "dev": "next dev",
